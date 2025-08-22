@@ -1,0 +1,37 @@
+# meta keyword 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+--->
+depends_on = [aws_security_group.mygroup , aws_key_pair.mykey]
+
+# It means that first security group and key pair will created then Ec2 will be created Ec2 depends on both things if they are not available or created then ec2 will not be created.
+
+--->
+count = 2
+
+---> 
+
+	for_each = tomap({
+
+		myinstacne1 = "t2.micro"
+		myinstance2 = "t2.medium"
+	})
+
+
+myinstance1 ------> name -----> each.key -----> tag
+t2.micro ---------> value -----> each.value ----> instance_type
+
+
+
+
+---> output block with for each
+
+output "instacne_public_ip" {
+	value = [
+		for instance in aws.instance.my_instance : instance.public_ip
+	]
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Qodo gen option in vscode use to generate the test cases for your code.
