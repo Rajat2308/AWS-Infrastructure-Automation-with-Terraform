@@ -25,6 +25,7 @@ Terraform
 AWS (EC2, VPC, Security Groups, KeyPair)
 
 AWS CLI
+
 Usage
 # Initialize Terraform
 terraform init  
