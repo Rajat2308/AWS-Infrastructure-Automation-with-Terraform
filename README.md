@@ -10,7 +10,7 @@ Features
 
 Provision EC2 instances with customizable instance type and AMI.
 
-Create a VPC with subnets and route tables.
+Create a VPC.
 
 Configure Security Groups with inbound and outbound rules.
 
@@ -22,7 +22,7 @@ Tech Stack
 
 Terraform
 
-AWS (EC2, VPC, Security Groups)
+AWS (EC2, VPC, Security Groups, KeyPair)
 
 AWS CLI
 
