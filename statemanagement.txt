@@ -1,0 +1,50 @@
+Terraform state management & backend
+
+Role -->
+terraform perform --
+1) deploy
+2) apply
+3) create
+4) destroy
+5) modifiy
+
+terraform.tfstatus --- is a file in Terraform that maintains the current status (running, stopped, created), tracks how many instances have been created, and records when they were created.
+
+
+terraform refresh--- used to getting the updated state.
+terraform apply --- it will automatically refresh the state
+
+
+
+state cmnd---
+terraform state list  ---- showing list
+terraform state show  ---- showing particular selected item state details
+terraform state rm    ---- remove only the state management b/w provider (AWS) and terraform but key was still present.
+terraform import      ---- aws_intance.myserver copy the ID from console so we can import the key or any things else like this to terraform.
+	resource "aws_intance" "myserver"{
+		ami ="unkown"
+		instance_type = "unkown"
+	}
+then we use terraform import cmnd so we can import that things.
+
+
+Problem--->
+	1. Can not Commit state file on GitHub.
+	2. State conflict(2 person try to change the state)
+
+
+Solution Secure state --->
+
+        1. We store our state file in S3 bucket (Remote backend)
+        2. State file locking using dynamo DB (lock_id generated).
+
+
+locking step----
+
+1) aws provider required
+2) s3 bucket create
+3) dynamodb create
+4) configure provider
+5) terraform state backup file rename to getting terraform state file again
+
+---------------------------------------------------------------------------
