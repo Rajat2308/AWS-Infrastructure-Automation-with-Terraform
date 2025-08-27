@@ -51,3 +51,4 @@ variable "tags" {
   type        = string
   default     = "my_server"
 }
+
