@@ -42,6 +42,3 @@ terraform destroy
 # module link
 https://registry.terraform.io/browse/modules
 
-
-
-
