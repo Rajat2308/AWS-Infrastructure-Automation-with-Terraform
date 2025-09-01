@@ -18,3 +18,4 @@ for_each = local.instances
 
   instance_type        = each.value.instance_type
   availability_zone    = each.value.availability_zone
+
