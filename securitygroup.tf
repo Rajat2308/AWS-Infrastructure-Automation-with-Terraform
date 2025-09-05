@@ -30,7 +30,3 @@ resource "aws_security_group" "mygroup" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
-
-
-
