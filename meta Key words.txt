@@ -33,6 +33,7 @@ output "instacne_public_ip" {
 }
 
 
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Qodo gen option in vscode use to generate the test cases for your code.
