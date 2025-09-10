@@ -39,6 +39,9 @@ terraform apply
 # Destroy infrastructure
 terraform destroy  
 
+# Destroy Validation
+terraform validate  
+
 # module link
 https://registry.terraform.io/browse/modules
 
