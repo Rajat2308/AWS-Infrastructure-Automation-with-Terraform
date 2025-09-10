@@ -39,7 +39,7 @@ terraform apply
 # Destroy infrastructure
 terraform destroy  
 
-# Destroy Validation
+# Validation
 terraform validate  
 
 # module link
