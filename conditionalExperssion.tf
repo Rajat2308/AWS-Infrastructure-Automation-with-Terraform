@@ -13,3 +13,4 @@ root_block_device {
 	volume_size = var.env == "Pro" ? 20 : var.root_volume_size
 }
 
+
